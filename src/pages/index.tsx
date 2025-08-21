@@ -1,4 +1,3 @@
-import { Flex } from "@chakra-ui/react";
 import { NextPageContext } from "next";
 import { NextSeo } from "next-seo";
 
@@ -10,35 +9,28 @@ interface Props {
 
 const Home = ({ absoluteUrl }: Props) => {
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      minHeight="70vh"
-      gap={4}
-      mb={8}
-      w="full"
-    >
+    <>
       <NextSeo
-        title={`Purchase this Domain | ${absoluteUrl}`}
+        title={`EasyWrite.ai - Premium Domain for AI Writing Platform`}
         canonical={`https://www.${absoluteUrl}`}
-        description={`Domain for sale | ${absoluteUrl} `}
+        description={`EasyWrite.ai - Premium domain perfect for AI writing assistants, content creation platforms, and collaborative writing tools. Available for acquisition.`}
         openGraph={{
           url: `https://www.${absoluteUrl}`,
-          title: `Purchase this Domain | ${absoluteUrl}`,
+          title: `🪶 EasyWrite.ai - Premium Domain for AI Writing Platform`,
+          description: `Transform your writing experience with EasyWrite.ai. Perfect domain for launching AI-powered writing platforms and content creation tools.`,
           images: [
             {
               url: `https://www.${absoluteUrl}/og.png`,
-              width: 800,
-              height: 600,
-              alt: `Purchase this Domain | ${absoluteUrl}`,
+              width: 1200,
+              height: 630,
+              alt: `EasyWrite.ai - Premium Domain Available`,
             },
           ],
-          site_name: `Purchase this Domain | ${absoluteUrl}`,
+          site_name: `🪶 EasyWrite.ai`,
         }}
       />
       <Sale absoluteUrl={absoluteUrl} />
-    </Flex>
+    </>
   );
 };
 
